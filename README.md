@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
 
+Deployed at https://themoviesdb-angular-test.herokuapp.com
+
 ## Dependencies
 
 Run `npm i -g @angular/cli` to install angular-cli

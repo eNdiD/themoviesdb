@@ -1,0 +1,7 @@
+<div class='movies-wrapper'>
+  <app-movie-card *ngFor='let movie of movies' [movie]='movie' routerLink='/movie/{{movie.id}}'></app-movie-card>
+</div>
+<div *ngIf='!movies.length' class='not-found'>
+  Nothing to show here
+</div>
+<app-pager *ngIf='movies.length' [page]='page' [total]='total' [fetching]='fetching' (changePage)='getMovies($event)'></app-pager>

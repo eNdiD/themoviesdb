@@ -7,12 +7,13 @@
 
   .wrapper {
     display: flex;
+    align-items: center;
   }
 
   h1 {
     font-size: 24px;
     line-height: 40px;
-    margin-right: 40px;
+    margin: 0 40px 0 0;
 
     span {
       display: inline-block;
@@ -36,4 +37,28 @@
 
 .active {
   background: #6a1b9a;
+}
+
+.search {
+  margin-left: auto;
+  display: flex;
+
+  input {
+    outline: none;
+    border: none;
+    width: 180px;
+    height: 28px;
+    padding: 0 8px;
+    font-size: 14px;
+  }
+
+  button {
+    outline: none;
+    border: none;
+    background: #bf360c;
+    color: #f1f1f1;
+    border-radius: 0 4px 4px 0;
+    line-height: 28px;
+    height: 28px;
+  }
 }
