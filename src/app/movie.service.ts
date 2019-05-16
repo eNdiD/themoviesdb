@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import {NavigationEnd, Router} from '@angular/router';
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { environment } from '../environments/environment';
@@ -32,7 +32,7 @@ export class MovieService {
       .set('page', '' +  page)
       .set('api_key', this.apiKey);
 
-    return this.http.get<ResponseList>(`${this.apiUrl}/movie${this.currentUrl}`, { params });
+    return this.http.get<ResponseList>(`${this.apiUrl}/movie${this.currentUrl || '/popular'}`, { params });
   }
 
   getMovie(id: number): Observable<Movie> {

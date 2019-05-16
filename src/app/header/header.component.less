@@ -5,17 +5,26 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
   overflow: hidden;
 
+  .wrapper {
+    display: flex;
+  }
+
   h1 {
-    float: left;
     font-size: 24px;
     line-height: 40px;
     margin-right: 40px;
+
+    span {
+      display: inline-block;
+      background: #bf360c;
+      border-radius: 4px;
+      padding: 4px 6px;
+      line-height: 20px;
+    }
   }
 }
 
 .navigation {
-  float: left;
-
   span {
     display: inline-block;
     line-height: 40px;

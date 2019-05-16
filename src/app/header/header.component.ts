@@ -7,7 +7,6 @@ import { Router, NavigationEnd } from '@angular/router';
   styleUrls: ['./header.component.less']
 })
 export class HeaderComponent implements OnInit {
-  @Input() title: string;
   currentUrl: string;
   links: Array<object> = [
     { title: 'Popular', value: '/popular' },

@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: 'now_playing', component: MoviesComponent },
   { path: 'upcoming', component: MoviesComponent },
   { path: 'movie/:id', component: MovieDetailComponent },
+  { path: '', pathMatch: 'full', redirectTo: 'popular' },
   { path: '**', redirectTo: 'popular' }
 ];
 
