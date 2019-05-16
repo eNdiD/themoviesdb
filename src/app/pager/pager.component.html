@@ -1,0 +1,16 @@
+<div *ngIf='total > 0'>
+  <ul class='pager'>
+    <li [class.disabled]=' fetching || page === 1'>
+      <a (click)='handleClick(1)'>&lsaquo;&lsaquo; First</a>
+    </li>
+    <li [class.disabled]=' fetching || page === 1'>
+      <a (click)='handleClick(page - 1)'>&lsaquo; Prev</a>
+    </li>
+    <li [class.disabled]=' fetching || page === total'>
+      <a (click)='handleClick(page + 1)'>Next &rsaquo;</a>
+    </li>
+    <li [class.disabled]=' fetching || page === total'>
+      <a (click)='handleClick(total)'>Last &rsaquo;&rsaquo;</a>
+    </li>
+  </ul>
+</div>

@@ -1,8 +1,25 @@
 <div *ngIf='movie'>
-  <h2>{{movie.title}}</h2>
-  <div>
-    <p>id: {{movie.id}}</p>
-    <p>year: {{movie.release_date}}</p>
+  <div class='movie-summary'>
+    <div class='background' [ngStyle]='{ "background-image": bgSrc}'></div>
+    <div class='wrapper summary-wrapper'>
+      <img [src]='movie.poster_path' class='detail-poster'>
+      <div class='movie-detail'>
+        <h2 class='movie-title'>{{movie.title}} <span class='grey-text'>({{movie.release_date | date: 'yyyy'}})</span></h2>
+        <h4>Overview:</h4>
+        <p class='movie-overview'>{{movie.overview}}</p>
+        <h4>Cast:</h4>
+        <div class='cast-grid'>
+          <div *ngFor='let actor of cast'>
+            {{actor.name}} <span class='grey-text'>({{actor.character}})</span>
+          </div>
+        </div>
+        <div *ngIf='trailer'>
+          <h4>Trailer:</h4>
+          <div class='video-container'>
+            <iframe id="ytplayer" width="640" height="360" [src]='trailer.src' frameborder="0"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-<button (click)='goBack()'>&larr; go back</button>

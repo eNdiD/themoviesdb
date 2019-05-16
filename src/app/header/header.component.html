@@ -1,0 +1,8 @@
+<div class='header'>
+  <div class='wrapper'>
+    <h1>{{title}}</h1>
+    <nav class='navigation'>
+      <span *ngFor='let link of links' [class.active]='link.value === currentUrl' [routerLink]='link.value'>{{link.title}}</span>
+    </nav>
+  </div>
+</div>

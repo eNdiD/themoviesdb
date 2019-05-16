@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  background: #111;
+  color: #f1f1f1;
+}
+
+.wrapper {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+@media all and (max-width: 1200px) {
+  .wrapper {
+    width: 960px;
+  }
+}
+
+@media all and (max-width: 1000px) {
+  .wrapper {
+    width: 720px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .wrapper {
+    width: 440px;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .wrapper {
+    width: auto;
+    margin: 0 10px;
+  }
+}
+

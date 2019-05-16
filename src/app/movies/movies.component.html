@@ -1,8 +1,4 @@
-<h2>List Movies</h2>
-<ul>
-  <li *ngFor='let movie of movies'>
-    <a routerLink='/movie/{{movie.id}}'>
-      {{movie.title}}
-    </a>
-  </li>
-</ul>
+<div class='movies-wrapper'>
+  <app-movie-card *ngFor='let movie of movies' [movie]='movie' routerLink='/movie/{{movie.id}}'></app-movie-card>
+</div>
+<app-pager [page]='page' [total]='total' [fetching]='fetching' (changePage)='getMovies($event)'></app-pager>

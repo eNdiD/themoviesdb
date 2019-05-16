@@ -1,0 +1,7 @@
+<div class='movie-card'>
+  <div class='inner' [ngStyle]='cardStyles'>
+    <div class='overlay'>
+      <span class='movie-title'>{{movie.title}}<br>({{movie.release_date | date: 'yyyy'}})</span>
+    </div>
+  </div>
+</div>

@@ -10,6 +10,9 @@ import { Movie } from '../movie';
 })
 export class MoviesComponent implements OnInit {
   movies: Movie[];
+  page: number;
+  total: number;
+  fetching: boolean;
 
   constructor(private movieService: MovieService) { }
 
@@ -17,11 +20,14 @@ export class MoviesComponent implements OnInit {
     this.getMovies();
   }
 
-  getMovies(): void {
-    this.movieService.getMovies()
-      .subscribe(movies => {
-        this.movies = movies;
-        console.log(movies);
+  getMovies(page: number = 1): void {
+    this.fetching = true;
+    this.movieService.getMovies(page)
+      .subscribe(resp => {
+        this.movies = resp.results;
+        this.page = resp.page;
+        this.total = resp.total_pages;
+        this.fetching = false;
       });
   }
 }
