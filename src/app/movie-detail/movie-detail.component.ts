@@ -36,7 +36,7 @@ export class MovieDetailComponent implements OnInit {
         this.trailer = movie.videos.results.find(video =>
           video.type.toLowerCase() === 'trailer' && video.site.toLowerCase() === 'youtube'
         );
-        this.trailer.src = this.sanitizer.bypassSecurityTrustResourceUrl(`http://www.youtube.com/embed/${this.trailer.key}`);
+        this.trailer.src = this.sanitizer.bypassSecurityTrustResourceUrl(`https://www.youtube.com/embed/${this.trailer.key}`);
       });
   }
 }
