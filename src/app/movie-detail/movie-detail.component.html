@@ -1,0 +1,8 @@
+<div *ngIf='movie'>
+  <h2>{{movie.title}}</h2>
+  <div>
+    <p>id: {{movie.id}}</p>
+    <p>year: {{movie.release_date}}</p>
+  </div>
+</div>
+<button (click)='goBack()'>&larr; go back</button>
