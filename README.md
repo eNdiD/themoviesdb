@@ -1,8 +1,14 @@
 # The Movies DB (Angular dummy project)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
+This demo application represents simple movies library viewer. As a backend was used  [TMDb](https://www.themoviedb.org) service. Key features:
+* Different movies lists with pagination
+* Searching by movie name
+* Movie detailed view
+* Movie's cast and trailer
 
 Deployed at https://themoviesdb-angular-test.herokuapp.com
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
 
 ## Dependencies
 
