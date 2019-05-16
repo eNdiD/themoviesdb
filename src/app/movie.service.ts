@@ -22,7 +22,7 @@ export class MovieService {
   ) {
     router.events.subscribe((event) => {
       if (event instanceof NavigationEnd ) {
-        this.currentUrl = event.url;
+        this.currentUrl = event.url === '/' ? '/popular' : event.url;
       }
     });
   }
@@ -32,7 +32,7 @@ export class MovieService {
       .set('page', '' +  page)
       .set('api_key', this.apiKey);
 
-    return this.http.get<ResponseList>(`${this.apiUrl}/movie${this.currentUrl || '/popular'}`, { params });
+    return this.http.get<ResponseList>(`${this.apiUrl}/movie${this.currentUrl}`, { params });
   }
 
   getMovie(id: number): Observable<Movie> {
